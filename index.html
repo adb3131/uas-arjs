@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>UAS AR</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.1/aframe/build/aframe-ar.min.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+      
+      <!-- Marker dengan custom pattern -->
+      <a-marker type="pattern" url="marker.patt">
+
+        <!-- Foto kamu -->
+        <a-image 
+          src="foto.jpg" 
+          position="0 0 0" 
+          rotation="-90 0 0" 
+          width="1" 
+          height="1">
+        </a-image>
+
+        <!-- Model 3D superhero -->
+        <a-entity 
+          gltf-model="superhero.glb" 
+          scale="0.5 0.5 0.5" 
+          position="0 0 1" 
+          rotation="0 180 0">
+        </a-entity>
+
+      </a-marker>
+
+      <!-- Kamera AR -->
+      <a-entity camera></a-entity>
+
+    </a-scene>
+  </body>
+</html>
