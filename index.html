@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>UAS AR</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+    <!-- Gunakan versi A-Frame yang kompatibel -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    <!-- AR.js versi 2.0.1 kompatibel dengan A-Frame 1.0.4 -->
     <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/2.0.1/aframe/build/aframe-ar.min.js"></script>
   </head>
 
@@ -13,7 +17,7 @@
       <!-- Marker dengan custom pattern -->
       <a-marker type="pattern" url="marker.patt">
 
-        <!-- Foto kamu -->
+        <!-- Gambar -->
         <a-image 
           src="foto.jpg" 
           position="0 0 0" 
@@ -22,13 +26,13 @@
           height="1">
         </a-image>
 
-        <!-- Model 3D superhero -->
-        <a-entity 
-        gltf-model="superhero.glb" 
-        scale="0.3 0.3 0.3" 
-        position="0 0 0.5" 
-        rotation="0 180 0">
-        </a-entity>
+        <!-- Model 3D Superhero -->
+<a-entity 
+  gltf-model="superhero.glb" 
+  scale="3 3 3" 
+  position="0 0.5 0.5" 
+  rotation="0 180 0">
+</a-entity>
 
 
       </a-marker>
